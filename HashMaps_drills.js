@@ -1,4 +1,6 @@
 import HashMap from './HashMap.js';
+import removeDuplicates from './remove-duplicates.js';
+import anyPalindrome from './any-palindrome.js';
 
 function main() {
   let lotr = new HashMap();
@@ -19,7 +21,7 @@ function main() {
     lotr.set(key, value);
   }
 
-  console.log(lotr.get('Hobbit'));
+  // console.log(lotr.get('Hobbit'));
 
   // There is a discrepency in getting both Maiar and Hobbit becuase there are 
   // two entries with the same key.
@@ -28,7 +30,11 @@ function main() {
   // when we passed the MAX_LOAD_RATIO the capacity (8) was multiplied by
   // the SIZE_RATIO (3).
 
-  WhatDoesThisDo();
+  // console.log(removeDuplicates('google all that you think can think of'));
+
+  // console.log(anyPalindrome('acecarr'));
+  // console.log(anyPalindrome('dad'));
+  // console.log(anyPalindrome('bread'));
 }
 
 const WhatDoesThisDo = function () {
