@@ -1,4 +1,4 @@
-class HashMap {
+export default class HashMap {
   constructor(initialCapactiy = 8) {
     this.length = 0;
     this._hashTable = [];
@@ -15,11 +15,19 @@ class HashMap {
     return hash >>> 0;
   }
 
+  get(key) {
+    const index = this._findSlot(key);
+    if (this._hashTable[index] === undefined) {
+      throw new Error('Key error');
+    }
+    return this._hashTable[index].value;
+  }
+
   set(key, value) {
     const loadRatio = (this.length + this._deleted + 1) / this._capacity;
 
-    if (loadRatio > HashMap.MAX_LOAD_RATIO) {
-      this._resize(this._capacity * HashMap.SIZE_RATIO);
+    if (loadRatio > this.MAX_LOAD_RATIO) {
+      this._resize(this._capacity * this.SIZE_RATIO);
     }
 
     const index = this._findSlot(key);
