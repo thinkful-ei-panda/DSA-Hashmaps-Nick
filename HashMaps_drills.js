@@ -1,10 +1,11 @@
 import HashMap from './HashMap.js';
+import SCMap from './SeparateChaining_HashMap.js';
 import removeDuplicates from './remove-duplicates.js';
 import anyPalindrome from './any-palindrome.js';
 import anagramGrouping from './anagram-grouping.js';
 
 function main() {
-  let lotr = new HashMap();
+  let lotr = new SCMap(9);
 
   lotr.MAX_LOAD_RATIO = 0.5;
   lotr.SIZE_RATIO = 3;
@@ -22,7 +23,7 @@ function main() {
     lotr.set(key, value);
   }
 
-  // console.log(lotr.get('Hobbit'));
+  console.log(lotr);
 
   // There is a discrepency in getting both Maiar and Hobbit becuase there are 
   // two entries with the same key.
