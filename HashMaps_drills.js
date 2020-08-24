@@ -1,6 +1,7 @@
 import HashMap from './HashMap.js';
 import removeDuplicates from './remove-duplicates.js';
 import anyPalindrome from './any-palindrome.js';
+import anagramGrouping from './anagram-grouping.js';
 
 function main() {
   let lotr = new HashMap();
@@ -35,6 +36,9 @@ function main() {
   // console.log(anyPalindrome('acecarr'));
   // console.log(anyPalindrome('dad'));
   // console.log(anyPalindrome('bread'));
+
+  // console.log(anagramGrouping(['east', 'cars', 'acre', 'arcs', 'teas', 'eats', 'race']));
+  // anagramGrouping(['east', 'cars', 'acre', 'arcs', 'teas', 'eats', 'race']);
 }
 
 const WhatDoesThisDo = function () {
